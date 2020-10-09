@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class = "selectors">
+            <label for="Grocery">Grocery to add to:</label>
+            <select id="grocery-store">
+                <option value="Walmart">Walmart</option>
+            </select>
+        </div>
+
+        <div class = "selectors">
+            <label for="Grocery">Category to add to:</label>
+            <select id="grocery-categories">
+                <option value="produce">Produce</option>
+                <option value="vegetables">Vegetables</option>
+                <option value="dairy">Dairy</option>
+            </select>
+        </div>
+
+        <label>Grocery Item:</label>
+        <input id="grocery-item-input" type="text">
+        <button id="submit">Submit</button>
+        <button id="getData">Get All Data</button>
+
+        <div id= "display"></div>
+    </div>
+
+
+    <script src="firebase.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
