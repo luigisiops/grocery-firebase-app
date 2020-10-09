@@ -19,3 +19,8 @@ body{
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+#id {
+    display: flex;
+    flex-direction: row;
+}

@@ -25,10 +25,16 @@ const addData = () => {
 
 const getAllItems = () => {
     db.collection(groceryStore.value).doc(categories.value).get().then((snapshot)=>{
+        display.innerHTML = ""
        let data = snapshot.data()
        console.log(data.items)
        data.items.map((item)=>{
-        display.insertAdjacentHTML('beforeend',item)
+        let template = `
+        <div id = "list">
+        <li>${item}</li>
+        <button class = "delete">Delete</button>
+        </div>`
+        display.insertAdjacentHTML('beforeend',template)
        })
     })
 }
